@@ -1,29 +1,35 @@
 const defValue=0;
 let currentValue=defValue;
 
+function calDess(Cv,opr,UsIn)
+{
+const caldes=`${Cv} ${opr} ${UsIn}`;
+outputResult(currentValue,caldes);
+}
+
 function add()
 {
-    const caldes=`${currentValue}+${userInput.value}`;
-    currentValue=currentValue+ parseInt(userInput.value);
-    outputResult(currentValue,caldes);
+    const init=currentValue;
+    currentValue=currentValue + parseInt(userInput.value);
+    calDess(init,'+',userInput.value);
 }
 function sub()
 {
-    const caldes=`${currentValue}-${userInput.value}`;
+    const init=currentValue;
     currentValue=currentValue - parseInt(userInput.value);
-    outputResult(currentValue,caldes);
+    calDess(init,'-',userInput.value);
 }
 function mul()
 {
-    const caldes=`${currentValue}*${userInput.value}`;
+    const init=currentValue;
     currentValue=currentValue * parseInt(userInput.value);
-    outputResult(currentValue,caldes);
+    calDess(init,'*',userInput.value);
 }
 function div()
 {
-    const caldes=`${currentValue}/${userInput.value}`;
+    const init=currentValue;
     currentValue=currentValue / parseInt(userInput.value);
-    outputResult(currentValue,caldes);
+    calDess(init,'/',userInput.value);
 }
 
 addBtn.addEventListener("click", add);
