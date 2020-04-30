@@ -14,7 +14,7 @@ the "index.html" different sections are beautified by this css file.
 I've used different styling properties eg. padding,shadow,different colours,etc...
 
 --
-the script folder contains to files
+the script folder contains two files
 i. vendor.js
       here i've declared different variables to store data in it and display the output result.
 
